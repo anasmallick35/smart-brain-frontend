@@ -109,7 +109,6 @@ class App extends Component {
         .then(response => response.json())
       .then(response => {
         if (response) {
-          const apiUrl = process.env.REACT_APP_API_URL;
           fetch('http://localhost:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
