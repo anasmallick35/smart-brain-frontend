@@ -20,7 +20,8 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = ()=>{
-    fetch('https://smart-brain-backend-seven.vercel.app/register' , {
+    const apiUrl = process.env.REACT_APP_API_URL;
+    fetch(`${apiUrl}/register` , {
       method:'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
