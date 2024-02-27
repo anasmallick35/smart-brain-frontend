@@ -17,8 +17,7 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = ()=>{
-    const apiUrl = process.env.REACT_APP_API_URL;
-    fetch(`${apiUrl}/signin` , {
+    fetch('http://localhost:3000/signin' , {
       method:'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
