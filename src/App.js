@@ -109,7 +109,8 @@ class App extends Component {
         .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://smart-brain-backend-seven.vercel.app/image', {
+          const apiUrl = process.env.REACT_APP_API_URL;
+          fetch(`${apiUrl}/image`, {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
